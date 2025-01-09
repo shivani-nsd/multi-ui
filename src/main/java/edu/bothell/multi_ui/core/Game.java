@@ -15,6 +15,10 @@ public class Game {
         this.s = new World();
         this.p = new ArrayList<>();
     }
+
+    public Game(){
+      
+    }
     
     public Player addPlayer(Player p){
         this.p.add(p);
@@ -41,15 +45,6 @@ public class Game {
         System.out.println("isVAlid?"+s.getIt(pos)+"|" + sId+"|" + active.getSId()+"|");
        // getIt(int x, int y)
        // directions in state???
-
-       if(s.getIt(pos[0],pos[1])== active.getChar()) System.out.println("+10 pts!");
-       if(s.getIt(pos[0]-1,pos[1])== active.getChar()) System.out.println("+10 pts!");
-       if(s.getIt(pos[0]+1,pos[1])== active.getChar()) System.out.println("+10 pts!");
-       if(s.getIt(pos[0],pos[1]-1)== active.getChar()) System.out.println("+10 pts!");
-       if(s.getIt(pos[0],pos[1]+1)== active.getChar()) System.out.println("+10 pts!");
-       if(s.getIt(pos[0]+1,pos[1]+1)== active.getChar()) System.out.println("+10 pts!");
-       if(s.getIt(pos[0]-1,pos[1]-1)== active.getChar()) System.out.println("+10 pts!");
-
 
         return s.isOpen(pos) && active.getSId().equals(sId);
 
