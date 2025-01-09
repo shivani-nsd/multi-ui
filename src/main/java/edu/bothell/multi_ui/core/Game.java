@@ -39,7 +39,23 @@ public class Game {
     
     public boolean isValid(int[] pos, String sId){
         System.out.println("isVAlid?"+s.getIt(pos)+"|" + sId+"|" + active.getSId()+"|");
+       // getIt(int x, int y)
+       // directions in state???
+
+       if(s.getIt(pos[0],pos[1])== active.getChar()) System.out.println("+10 pts!");
+       if(s.getIt(pos[0]-1,pos[1])== active.getChar()) System.out.println("+10 pts!");
+       if(s.getIt(pos[0]+1,pos[1])== active.getChar()) System.out.println("+10 pts!");
+       if(s.getIt(pos[0],pos[1]-1)== active.getChar()) System.out.println("+10 pts!");
+       if(s.getIt(pos[0],pos[1]+1)== active.getChar()) System.out.println("+10 pts!");
+       if(s.getIt(pos[0]+1,pos[1]+1)== active.getChar()) System.out.println("+10 pts!");
+       if(s.getIt(pos[0]-1,pos[1]-1)== active.getChar()) System.out.println("+10 pts!");
+
+
         return s.isOpen(pos) && active.getSId().equals(sId);
+
+
+
+
     }
 
     public char play(int[] pos, String sId){
