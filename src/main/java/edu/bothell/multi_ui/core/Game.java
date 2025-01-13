@@ -49,6 +49,7 @@ public class Game {
         this.active = p.get( turn % p.size() );
 
         return active.getChar();
+        //comment
     }
 
     public Player getActive() {
