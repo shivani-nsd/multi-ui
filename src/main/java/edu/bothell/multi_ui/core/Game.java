@@ -19,7 +19,6 @@ public class Game {
     public Player addPlayer(Player p){
         this.p.add(p);
         if(this.active == null) active = p;
-
         return p;
     }
 
